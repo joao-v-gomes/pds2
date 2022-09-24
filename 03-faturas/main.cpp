@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
 
@@ -13,7 +14,8 @@ class Fatura {
 	bool _ja_foi_paga;
 
   public:
-	Fatura(char tipo_pag, double valor, string cod_pag) {
+	Fatura(int id, char tipo_pag, double valor, string cod_pag) {
+		_id_fatura = id;
 		_tipo_pagamento = tipo_pag;
 		_cod_pagamento = cod_pag;
 		_valor = valor;
@@ -36,8 +38,12 @@ class Fatura {
 		return _ja_foi_paga;
 	}
 
-	void imprimir() {
-		cout << _id_fatura << " : " << _tipo_pagamento << "  " << _cod_pagamento << "  " << _valor << "  " << _ja_foi_paga;
+	void paga_fatura() {
+		_ja_foi_paga = true;
+	}
+
+	void imprimir_fat() {
+		cout << _id_fatura << ": " << _tipo_pagamento << "  " << _cod_pagamento << "  " << _valor << "  " << _ja_foi_paga << "\n";
 	}
 };
 
@@ -45,6 +51,7 @@ class Colecao {
   private:
 	int _id_fatura;
 	vector<Fatura *> _faturas;
+	map<char, int> status;
 
   public:
 	Colecao() {
@@ -58,16 +65,23 @@ class Colecao {
 	}
 
 	void imprimir() {
+		cout << "ID TIPO COD VALOR PAGA\n";
+		for (Fatura *f : _faturas) {
+			f->imprimir_fat();
+		}
 	}
 
-	void status() {
+	void status_colecao() {
 	}
 };
 
 int main() {
 	Colecao *colecao = new Colecao();
 	Fatura *f;
-	cout << "Abriu\n";
+
+	int id = 0;
+
+	// cout << "Abriu\n";
 	char test = 0;
 	cout << "Digite-operacao ";
 	while (cin >> test) {
@@ -80,29 +94,40 @@ int main() {
 
 				cin >> tipo_pag >> valor >> cod_paga;
 
-				f = new Fatura(tipo_pag, valor, cod_paga);
+				f = new Fatura(id, tipo_pag, valor, cod_paga);
+
+				cout << "Gerou fatura\n";
+
+				colecao->adicionar(f);
+
+				id++;
+
+				cout << "Add na colecao\n";
 			} break;
 
 			case 'r':
 				cout << "Foi-pagamento\n";
 				break;
 
-			case 'p':
+			case 'p': {
 				cout << "Foi-imprimir-elementos\n";
-				break;
+				colecao->imprimir();
+			} break;
 
-			case 's':
+			case 's': {
 				cout << "Foi-imprimir-faturas-restantes\n";
-				break;
+			} break;
 
-			case 'e':
+			case 'e': {
 				cout << "Foi-sair\n";
 				exit(1);
-				break;
+			} break;
 
-			default:
+			default: {
 				cout << "Erro no menu\n";
+			} break;
 		}
-		return 0;
+		cout << "Digite-operacao ";
 	}
+	return 0;
 }
