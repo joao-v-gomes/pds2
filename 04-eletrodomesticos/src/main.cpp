@@ -31,15 +31,16 @@ int main() {
 				estoque.armazena_fogao(numero_de_queimadores, capacidade_forno);
 			} break;
 			case 'v': {
+				std::cout << "Foi-vender";
 				char produto;
 				std::cin >> produto;
 				if (produto == 'g') {
-					std::cout << "Foi-vende-geladeira\n";
+					std::cout << "Foi-vender-geladeira\n";
 					int capacidade_em_litros, numero_de_portas;
 					std::cin >> capacidade_em_litros >> numero_de_portas;
 					estoque.vende_geladeira(capacidade_em_litros, numero_de_portas);
 				} else if (produto == 'f') {
-					std::cout << "Foi-vende-fogao\n";
+					std::cout << "Foi-vender-fogao\n";
 					int numero_de_queimadores, capacidade_forno;
 					std::cin >> numero_de_queimadores >> capacidade_forno;
 					estoque.vende_fogao(numero_de_queimadores, capacidade_forno);

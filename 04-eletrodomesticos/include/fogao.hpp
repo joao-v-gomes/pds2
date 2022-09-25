@@ -6,7 +6,7 @@
 class Fogao {
   private:
 	// Adicione suas variaveis globais aqui
-	int _indice_fogao;
+	int _indice_fogao = 0;
 	int _numero_de_queimadores;
 	int _capacidade_forno;
 

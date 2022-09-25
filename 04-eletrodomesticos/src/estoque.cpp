@@ -1,6 +1,7 @@
 #include "estoque.hpp"
 #include "fogao.hpp"
 #include "geladeira.hpp"
+#include <vector>
 
 Estoque::Estoque() { /*TODO*/
 }
@@ -21,10 +22,30 @@ void Estoque::armazena_fogao(int queimadores, int capacidade) {
 	_indice_fogao++;
 }
 
-void Estoque::vende_geladeira(int capacidade, int portas) { /*TODO*/
+void Estoque::vende_geladeira(int capacidade, int portas) {
+	int i = 0;
+	if (geladeiras.size() == 0) {
+		return;
+	} else {
+		for (Geladeira g : geladeiras) {
+			if ((g.get_capacidade_litros() == capacidade) && (g.get_numero_portas() == portas)) {
+				geladeiras.erase(geladeiras.begin() + i);
+			}
+		}
+	}
 }
 
-void Estoque::vende_fogao(int queimadores, int capacidade) { /*TODO*/
+void Estoque::vende_fogao(int queimadores, int capacidade) {
+	int i = 0;
+	if (fogoes.size() == 0) {
+		return;
+	} else {
+		for (Fogao f : fogoes) {
+			if ((g.get_numero_queimadores() == queimadores) && (f.get_capacidade_forno() == capacidade)) {
+				fogoes.erase(fogoes.begin() + i);
+			}
+		}
+	}
 }
 
 void Estoque::exibe_geladeiras() {
@@ -34,7 +55,7 @@ void Estoque::exibe_geladeiras() {
 		std::cout << g.get_indice_geladeira() << "  " << g.get_capacidade_litros() << "  " << g.get_numero_portas() << "\n";
 	}
 
-	std::cout << "\n\n";
+	std::cout << "\n";
 }
 
 void Estoque::exibe_fogoes() {
@@ -43,13 +64,13 @@ void Estoque::exibe_fogoes() {
 	for (Fogao f : fogoes) {
 		std::cout << f.get_indice_fogao() << "  " << f.get_numero_queimadores() << "  " << f.get_capacidade_forno() << "\n";
 	}
-	std::cout << "\n\n";
+	std::cout << "\n";
 }
 
 int Estoque::quantidade_geladeiras() {
-	return _indice_geladeira++;
+	return geladeiras.size();
 }
 
 int Estoque::quantidade_fogoes() {
-	return _indice_geladeira++;
+	return fogoes.size();
 }

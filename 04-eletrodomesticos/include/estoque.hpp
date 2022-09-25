@@ -8,30 +8,30 @@
 
 class Estoque {
 
-private:
-  std::vector<Geladeira> geladeiras;
-  std::vector<Fogao> fogoes;
-  int _indice_fogao;
-  int _indice_geladeira;
+  private:
+	std::vector<Geladeira> geladeiras;
+	std::vector<Fogao> fogoes;
+	int _indice_fogao = 0;
+	int _indice_geladeira = 0;
 
-public:
-  Estoque();
+  public:
+	Estoque();
 
-  void armazena_geladeira(int capacidade, int portas);
+	void armazena_geladeira(int capacidade, int portas);
 
-  void vende_geladeira(int capacidade, int portas);
+	void vende_geladeira(int capacidade, int portas);
 
-  void armazena_fogao(int queimadores, int capacidade);
+	void armazena_fogao(int queimadores, int capacidade);
 
-  void vende_fogao(int queimadores, int capacidade);
+	void vende_fogao(int queimadores, int capacidade);
 
-  void exibe_geladeiras();
+	void exibe_geladeiras();
 
-  void exibe_fogoes();
+	void exibe_fogoes();
 
-  int quantidade_geladeiras();
+	int quantidade_geladeiras();
 
-  int quantidade_fogoes();
+	int quantidade_fogoes();
 };
 
 #endif
