@@ -57,10 +57,13 @@ void print_char(char *n) {
 // O parametro e a referencia para um string.
 // A funcao deve adicionar uma quebra de linha '\n' apos exibir a string.
 void print_string(string &str) {
+	// Ponteiro de string s recebe null
 	string *s = NULL;
 
+	// Endereco de s aponta para o endereco de str
 	s = &str;
 
+	// Valor de s recebe valor de s mais \n
 	*s = *s + '\n';
 
 	cout << *s;
@@ -69,10 +72,13 @@ void print_string(string &str) {
 // 7) A funcao deve concatenar uma string (end) ao final de outra (begin)
 void concatenar_string(string &begin, string end) {
 
+	// Ponteiro de string s recebe null
 	string *s = NULL;
 
+	// Endereco de s aponta para o endereco de begin
 	s = &begin;
 
+	// Valor de s recebe valor de s mais end
 	*s = *s + end;
 
 	// cout << *s;
@@ -82,9 +88,9 @@ void concatenar_string(string &begin, string end) {
 // inicializa-las com o identificador da sua posição
 void aloca_array(int **arr) {
 
-	// int *array = NULL;
-
 	arr = new int *[10];
+
+	for
 }
 
 // 9) A funcao deve exibir os valores armazenados em um array
