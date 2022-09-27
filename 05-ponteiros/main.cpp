@@ -5,11 +5,13 @@ using namespace std;
 
 // 1) A funcao deve adicionar dez a uma variavel inteira
 void add10(int *n) {
+	// utilizando o valor do ponteiro
 	*n = *n + 10;
 }
 
 // 2) A funcao deve comparar dois endereços, retornando true se apontarem para a mesma posicao na memoria e false caso contrario
 bool compare_end(int *num1, int *num2) {
+	// utilizando o endereco do ponteiro
 	if (num1 == num2) {
 		return true;
 	}
@@ -18,6 +20,7 @@ bool compare_end(int *num1, int *num2) {
 
 // 3) A funcao deve comparar os valores armazenados em dois enderecos, retornando true se forem iguais e false caso contrario
 bool compare_val(int *num1, int *num2) {
+	// utilizando o valor do ponteiro
 	if (*num1 == *num2) {
 		return true;
 	}
@@ -26,7 +29,11 @@ bool compare_val(int *num1, int *num2) {
 
 // 4) A funcao deve receber o ponteiro para um numero inteiro e retornar o ponteiro para um caracteres
 char *cast_TO_char(int *n) {
-	char *c = NULL;
+	// fazendo um cast na tora
+	char *c = (char *)n;
+
+	// cout << "Valor n:" << *n;
+	// cout << "End n:" << n;
 	return c;
 }
 
@@ -34,21 +41,50 @@ char *cast_TO_char(int *n) {
 // O parametro e um ponteiro para a primeira posicao do vetor de caracteres
 // A funcao deve adicionar uma quebra de linha '\n' apos exibir a cadeia de caracteres.
 void print_char(char *n) {
+	// For nos caracteres até o \0.
+	// O n já é vetor de char, entao e so usar as posicoes de n
+	for (int i = 0; i != -1; i++) {
+		if (n[i] == '\0') {
+			i = -1;
+			return;
+		} else {
+			cout << n[i];
+		}
+	}
 }
 
 // 6) A funcao deve imprimir uma string.
 // O parametro e a referencia para um string.
 // A funcao deve adicionar uma quebra de linha '\n' apos exibir a string.
 void print_string(string &str) {
+	string *s = NULL;
+
+	s = &str;
+
+	*s = *s + '\n';
+
+	cout << *s;
 }
 
 // 7) A funcao deve concatenar uma string (end) ao final de outra (begin)
 void concatenar_string(string &begin, string end) {
+
+	string *s = NULL;
+
+	s = &begin;
+
+	*s = *s + end;
+
+	// cout << *s;
 }
 
 // 8) A funcao deve uma alocar um array com 10 posicoes e
 // inicializa-las com o identificador da sua posição
 void aloca_array(int **arr) {
+
+	// int *array = NULL;
+
+	arr = new int *[10];
 }
 
 // 9) A funcao deve exibir os valores armazenados em um array
