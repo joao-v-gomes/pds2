@@ -31,6 +31,7 @@ void Estoque::vende_geladeira(int capacidade, int portas) {
 			if ((g.get_capacidade_litros() == capacidade) && (g.get_numero_portas() == portas)) {
 				geladeiras.erase(geladeiras.begin() + i);
 			}
+			i++;
 		}
 	}
 }
@@ -41,30 +42,31 @@ void Estoque::vende_fogao(int queimadores, int capacidade) {
 		return;
 	} else {
 		for (Fogao f : fogoes) {
-			if ((g.get_numero_queimadores() == queimadores) && (f.get_capacidade_forno() == capacidade)) {
+			if ((f.get_numero_queimadores() == queimadores) && (f.get_capacidade_forno() == capacidade)) {
 				fogoes.erase(fogoes.begin() + i);
 			}
+			i++;
 		}
 	}
 }
 
 void Estoque::exibe_geladeiras() {
-	std::cout << "Geladeiras\n";
-	std::cout << "ID  CAPACIDADE  PORTAS\n";
+	// std::cout << "Geladeiras\n";
+	// std::cout << "ID  CAPACIDADE  PORTAS\n";
 	for (Geladeira g : geladeiras) {
 		std::cout << g.get_indice_geladeira() << "  " << g.get_capacidade_litros() << "  " << g.get_numero_portas() << "\n";
 	}
 
-	std::cout << "\n";
+	// std::cout << "\n";
 }
 
 void Estoque::exibe_fogoes() {
-	std::cout << "Fogoes\n";
-	std::cout << "ID  QUEIMADORES  CAPACIDADE\n";
+	// 	std::cout << "Fogoes\n";
+	// std::cout << "ID  QUEIMADORES  CAPACIDADE\n";
 	for (Fogao f : fogoes) {
 		std::cout << f.get_indice_fogao() << "  " << f.get_numero_queimadores() << "  " << f.get_capacidade_forno() << "\n";
 	}
-	std::cout << "\n";
+	// std::cout << "\n";
 }
 
 int Estoque::quantidade_geladeiras() {
