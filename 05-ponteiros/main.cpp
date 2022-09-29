@@ -46,6 +46,7 @@ void print_char(char *n) {
 	for (int i = 0; i != -1; i++) {
 		if (n[i] == '\0') {
 			i = -1;
+			cout << "\n";
 			return;
 		} else {
 			cout << n[i];
@@ -64,9 +65,11 @@ void print_string(string &str) {
 	s = &str;
 
 	// Valor de s recebe valor de s mais \n
-	*s = *s + '\n';
+	// *s = *s + '\n';
 
 	cout << *s;
+
+	cout << "\n";
 }
 
 // 7) A funcao deve concatenar uma string (end) ao final de outra (begin)
@@ -88,10 +91,10 @@ void concatenar_string(string &begin, string end) {
 // inicializa-las com o identificador da sua posição
 void aloca_array(int **arr) {
 
-	arr = new int *[10];
+	*arr = new int[10];
 
 	for (int i = 0; i < 10; i++) {
-		// arr[i] = i;
+		*arr[i] = i;
 	}
 }
 
