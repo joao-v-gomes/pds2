@@ -94,7 +94,7 @@ void aloca_array(int **arr) {
 	*arr = new int[10];
 
 	for (int i = 0; i < 10; i++) {
-		*arr[i] = i;
+		(*arr)[i] = i;
 	}
 }
 
@@ -120,9 +120,9 @@ int *retorna_addr_array_pos(int *arr, int pos) {
 // 11) A funcao deve liberar a memória utilizada pelo array
 void libera_array(int *arr) {
 
-	for (int i = 0; i < 10; i++) {
-		delete[] arr;
-	}
+	// for (int i = 0; i < 10; i++) {
+	// 	delete[] arr;
+	// }
 	delete arr;
 }
 
