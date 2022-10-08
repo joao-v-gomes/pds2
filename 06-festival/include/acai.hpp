@@ -45,12 +45,8 @@ class Acai : public Produto {
 	 */
 	std::string descricao() const override;
 
-	int getTamanho() const {
-		return _tamanho;
-	}
+	int getTamanho() const;
 
-	std::vector<std::string> getComplementos() const {
-		return _complementos;
-	}
+	std::vector<std::string> getComplementos() const;
 };
 #endif
