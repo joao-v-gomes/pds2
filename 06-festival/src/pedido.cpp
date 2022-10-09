@@ -12,7 +12,7 @@ float Pedido::calculaTotal() const {
 	float precoPedido = 0;
 
 	for (Produto *p : _produtos) {
-		precoPedido = precoPedido + p->calcPreco()
+		precoPedido = precoPedido + p->calcPreco();
 	};
 
 	return precoPedido;
@@ -22,9 +22,13 @@ std::string Pedido::resumo() const {
 	std::string resumoPedido = "";
 
 	for (Produto *p : _produtos) {
-		resumoPedido = p->descricao();
-		resumoPedido = "\n";
+		resumoPedido = resumoPedido + p->descricao();
+		resumoPedido = resumoPedido + "\n";
 	};
+
+	// resumoPedido = resumoPedido + "\n";
+
+	resumoPedido = resumoPedido + _endereco;
 
 	return resumoPedido;
 };
