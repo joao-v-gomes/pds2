@@ -27,7 +27,7 @@ class Acai : public Produto {
 	 */
 
 	Acai(int tamanho, std::vector<std::string> &complementos, int qtd);
-	Acai(int tamanho, std::vector<std::string> &complementos, int qtd, float valor);
+	// Acai(int tamanho, std::vector<std::string> &complementos, int qtd, float valor);
 
 	/**
 	 * @brief Calcula o valor do açaí de acordo com as regras:

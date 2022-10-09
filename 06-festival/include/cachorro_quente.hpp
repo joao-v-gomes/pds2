@@ -33,11 +33,11 @@ class CachorroQuente : public Produto {
 				   bool prensado,
 				   int qtd);
 
-	CachorroQuente(int num_salsichas,
-				   std::vector<std::string> &complementos,
-				   bool prensado,
-				   int qtd,
-				   float valor);
+	// CachorroQuente(int num_salsichas,
+	// 			   std::vector<std::string> &complementos,
+	// 			   bool prensado,
+	// 			   int qtd,
+	// 			   float valor);
 
 	/**
 	 * @brief Calcula o valor do cachorro quente de acordo com as regras:

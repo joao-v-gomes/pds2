@@ -1,12 +1,16 @@
 CC := g++
 FLAGS := -I include/ -Wall
 LFLAGS := -lm
-BUILD := build/
-SRC := src/
+BUILDDIR := build
+SRCDIR := src
 TARGET := main.out
 
-all: main
-	$(CC) $(FLAGS) $(LFLAGS) $(BUILDDIR)/*.o -o $(BUILDDIR)/main.out
+all: clean util
+	$(CC) $(FLAGS) $(LFLAGS) $(BUILDDIR)/*.o -o $(BUILDDIR)/$(TARGET)
+
+util: main
+	$(CC) $(FLAGS) -c $(SRCDIR)/util.cpp -o $(BUILDDIR)/util.o
+
 main: pedido venda
 	$(CC) $(FLAGS) -c $(SRCDIR)/main.cpp -o $(BUILDDIR)/main.o
 
@@ -29,4 +33,5 @@ pizza:
 	$(CC) $(FLAGS) -c $(SRCDIR)/pizza.cpp -o $(BUILDDIR)/pizza.o
 
 clean:
-	rm */build
+	rm -rf build/*
+	rm -rf build/$(TARGET)

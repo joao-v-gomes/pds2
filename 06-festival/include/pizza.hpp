@@ -32,11 +32,11 @@ class Pizza : public Produto {
 		  bool borda_recheada,
 		  int qtd);
 
-	Pizza(const std::string &sabor,
-		  int pedacos,
-		  bool borda_recheada,
-		  int qtd,
-		  float valor);
+	// Pizza(const std::string &sabor,
+	// 	  int pedacos,
+	// 	  bool borda_recheada,
+	// 	  int qtd,
+	// 	  float valor);
 
 	/**
 	 * @brief Calcula o valor da pizza de acordo com as regras:

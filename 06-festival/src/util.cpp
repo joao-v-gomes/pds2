@@ -13,6 +13,7 @@ void readAddress(Pedido *pedido) {
 
 	std::getline(std::cin, endereco);
 	pedido->setEndereco(endereco);
+	// std::cout << "adicionou endereco\n";
 }
 
 void readPizza(Pedido *pedido) {
@@ -21,6 +22,8 @@ void readPizza(Pedido *pedido) {
 	bool borda_recheada;
 	int qtd;
 	float valor;
+
+	// std::cout << "digite sabor,pedacos,borda,qtde,valor\n";
 
 	std::string line, tmp;
 	std::getline(std::cin, line);
@@ -43,6 +46,7 @@ void readPizza(Pedido *pedido) {
 
 	Produto *produto = new Pizza(sabor, pedacos, borda_recheada, qtd);
 	pedido->adicionaProduto(produto);
+	// std::cout << "adicionou pizza\n";
 }
 
 void readCachorroQuente(Pedido *pedido) {
@@ -50,6 +54,8 @@ void readCachorroQuente(Pedido *pedido) {
 	int num_salsichas;
 	bool prensado;
 	int qtd;
+
+	// std::cout << "digite numSalsichas,complementos,prensado,qtde\n";
 
 	std::string line, tmp;
 	std::getline(std::cin, line);
@@ -71,12 +77,15 @@ void readCachorroQuente(Pedido *pedido) {
 
 	Produto *produto = new CachorroQuente(num_salsichas, complementos, prensado, qtd);
 	pedido->adicionaProduto(produto);
+	// std::cout << "adicionou dogao\n";
 }
 
 void readAcai(Pedido *pedido) {
 	int tam;
 	std::vector<std::string> complementos;
 	int qtd;
+
+	// std::cout << "digite tamanho,complementos,qtde\n";
 
 	std::string line, tmp;
 	std::getline(std::cin, line);
@@ -95,4 +104,5 @@ void readAcai(Pedido *pedido) {
 
 	Produto *produto = new Acai(tam, complementos, qtd);
 	pedido->adicionaProduto(produto);
+	// std::cout << "adicionou acai\n";
 }

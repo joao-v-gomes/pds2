@@ -1,13 +1,23 @@
 #include "acai.hpp"
 
-Acai::Acai(int tamanho, std::vector<std::string> &complementos, int qtd, float valor) {
+// Acai::Acai(int tamanho, std::vector<std::string> &complementos, int qtd, float valor) {
+
+// 	_complementos.reserve(10);
+
+// 	_tamanho = tamanho;
+// 	_complementos = complementos;
+// 	_quantidade = qtd;
+// 	_valor_unitario = valor;
+// };
+
+Acai::Acai(int tamanho, std::vector<std::string> &complementos, int qtd) {
 
 	_complementos.reserve(10);
 
 	_tamanho = tamanho;
 	_complementos = complementos;
 	_quantidade = qtd;
-	_valor_unitario = valor;
+	// _valor_unitario = valor;
 };
 
 float Acai::calcPreco() {
@@ -27,7 +37,11 @@ std::string Acai::descricao() const {
 
 	std::string desc = "";
 
-	desc = Produto::getQtd() + "X açaí" + Acai::getTamanho() + "ml com ";
+	// desc = Produto::getQtd() + "X açaí" + Acai::getTamanho() + "ml com ";
+
+	desc = Produto::getQtd() + "X açaí" + Acai::getTamanho();
+
+	desc = desc + +"ml com ";
 
 	for (std::string s : _complementos) {
 		desc = desc + s + ", ";

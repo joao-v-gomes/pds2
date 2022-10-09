@@ -4,6 +4,8 @@ void Pedido::adicionaProduto(Produto *p) {
 	_produtos.push_back(p);
 };
 
+Pedido::~Pedido(){};
+
 void Pedido::setEndereco(const std::string &endereco) {
 	_endereco = endereco;
 };

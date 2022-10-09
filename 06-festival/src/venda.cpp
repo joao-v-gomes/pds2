@@ -1,6 +1,8 @@
 
 #include "venda.hpp"
 
+Venda::~Venda(){};
+
 void Venda::adicionaPedido(Pedido *p) {
 	_pedidos.push_back(p);
 };

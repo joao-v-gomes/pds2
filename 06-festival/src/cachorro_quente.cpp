@@ -1,6 +1,17 @@
 #include "cachorro_quente.hpp"
 
-CachorroQuente::CachorroQuente(int num_salsichas, std::vector<std::string> &complementos, bool prensado, int qtd, float valor) {
+// CachorroQuente::CachorroQuente(int num_salsichas, std::vector<std::string> &complementos, bool prensado, int qtd, float valor) {
+
+// 	_complementos.reserve(10);
+
+// 	_num_salsichas = num_salsichas;
+// 	_complementos = complementos;
+// 	_prensado = prensado;
+// 	_quantidade = qtd;
+// 	_valor_unitario = valor;
+// };
+
+CachorroQuente::CachorroQuente(int num_salsichas, std::vector<std::string> &complementos, bool prensado, int qtd) {
 
 	_complementos.reserve(10);
 
@@ -8,7 +19,6 @@ CachorroQuente::CachorroQuente(int num_salsichas, std::vector<std::string> &comp
 	_complementos = complementos;
 	_prensado = prensado;
 	_quantidade = qtd;
-	_valor_unitario = valor;
 };
 
 int CachorroQuente::getNumSalsichas() const {
@@ -35,13 +45,18 @@ float CachorroQuente::calcPreco() {
 std::string CachorroQuente::descricao() const {
 	std::string desc = "";
 
-	desc = Produto::getQtd() + "X cachorro-quente com " + CachorroQuente::getNumSalsichas() + " salsichas ";
+	// desc = Produto::getQtd() + "X cachorro-quente com " + CachorroQuente::getNumSalsichas() + " salsichas ";
+	desc = Produto::getQtd() + "X cachorro-quente com " + CachorroQuente::getNumSalsichas();
+
+	desc + desc + " salsichas ";
 
 	for (std::string s : _complementos) {
 		desc = desc + s + ", ";
 	}
 
 	desc = desc + ".";
+
+	return desc;
 };
 
 bool CachorroQuente::getPrensado() const {

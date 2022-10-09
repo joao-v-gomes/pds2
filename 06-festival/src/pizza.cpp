@@ -1,11 +1,18 @@
 #include "pizza.hpp"
 
-Pizza::Pizza(const std::string &sabor, int pedacos, bool borda_recheada, int qtd, float valor) {
+// Pizza::Pizza(const std::string &sabor, int pedacos, bool borda_recheada, int qtd, float valor) {
+// 	_sabor = sabor;
+// 	_pedacos = pedacos;
+// 	_borda = borda_recheada;
+// 	_quantidade = qtd;
+// 	_valor_unitario = valor;
+// };
+
+Pizza::Pizza(const std::string &sabor, int pedacos, bool borda_recheada, int qtd) {
 	_sabor = sabor;
 	_pedacos = pedacos;
 	_borda = borda_recheada;
 	_quantidade = qtd;
-	_valor_unitario = valor;
 };
 
 bool Pizza::getBorda() const {
@@ -32,16 +39,23 @@ float Pizza::calcPreco() {
 	if (Pizza::getSabor().find("especial")) {
 		preco_final = preco_final + 8;
 	}
+
+	return preco_final;
 };
 
 std::string Pizza::descricao() const {
 	std::string desc = "";
 
-	desc = Produto::getQtd() + "X com " + Pizza::getPedacos() + " pedaços de " + Pizza::getSabor();
+	// desc = Produto::getQtd() + "X com " + Pizza::getPedacos() + " pedaços de " + Pizza::getSabor();
+	desc = Produto::getQtd() + "X com " + Pizza::getPedacos();
+
+	desc = desc + " pedaços de " + Pizza::getSabor();
 
 	if (_borda == true) {
-		desc = desc + " e borda recheada"
+		desc = desc + " e borda recheada";
 	}
 
 	desc = desc + ".";
-}
+
+	return desc;
+};
