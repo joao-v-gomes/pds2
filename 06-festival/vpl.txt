@@ -1,0 +1,18 @@
+pedido
+pizza marguerita especial,4,1,5
+cachorro-quente 2,purê de batata,ketchup,0,3
+cachorro-quente 2,ketchup,maionese,batata palha,1,5
+pizza frango,6,1,6
+endereco
+Rua Lavras 158 Sao Pedro, Belo Horizonte
+
+
+Pedido 1
+5X pizza marguerita especial, 4 pedaços e borda recheada.
+3X cachorro-quente com 2 salsicha(s), purê de batata, ketchup.
+5X cachorro-quente prensado com 2 salsicha(s), ketchup, maionese, batata palha.
+6X pizza frango, 6 pedaços e borda recheada.
+Endereço: Rua Lavras 158 Sao Pedro, Belo Horizonte
+Relatorio de Vendas
+Total de vendas: R$517.50
+Total de pedidos: 1

@@ -11,32 +11,32 @@ int main() {
 
 	Venda vendas;
 	std::string command;
-	// std::cout << "digite pedido:\n";
+	std::cout << "digite pedido:\n";
 	std::getline(std::cin, command);
 	while (command == "pedido") {
-		// std::cout << "foi pedido\n";
+		std::cout << "foi pedido\n";
 		Pedido *pedido = new Pedido();
 		while (std::cin >> command) {
 			if (command == "pizza") {
-				// std::cout << "foi pizza\n";
+				std::cout << "foi pizza\n";
 				readPizza(pedido);
 			} else if (command == "acai") {
-				// std::cout << "foi acai\n";
+				std::cout << "foi acai\n";
 				readAcai(pedido);
 			} else if (command == "cachorro-quente") {
-				// std::cout << "foi dogao\n";
+				std::cout << "foi dogao\n";
 				readCachorroQuente(pedido);
 			} else if (command == "endereco") {
-				// std::cout << "foi endereço\n";
+				std::cout << "foi endereço\n";
 				readAddress(pedido);
 			} else {
 				break;
 			}
 		}
-		// std::cout << "adicionou pedido\n";
+		std::cout << "adicionou pedido\n";
 		vendas.adicionaPedido(pedido);
 	}
-	// std::cout << "foi relatorio\n";
+	std::cout << "foi relatorio\n";
 	vendas.imprimeRelatorio();
 	return 0;
 }

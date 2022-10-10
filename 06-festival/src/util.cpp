@@ -55,14 +55,18 @@ void readCachorroQuente(Pedido *pedido) {
 	bool prensado;
 	int qtd;
 
-	// std::cout << "digite numSalsichas,complementos,prensado,qtde\n";
+	std::cout << "digite numSalsichas,complementos,prensado,qtde\n";
 
 	std::string line, tmp;
 	std::getline(std::cin, line);
 	std::istringstream iss(line);
 
+	std::cout << "line: " << line << std::endl;
+
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> num_salsichas;
+
+	std::cout << "num_salc: " << num_salsichas << std::endl;
 
 	std::getline(iss, tmp, ',');
 	while (!std::isdigit(tmp[0])) {
@@ -72,12 +76,16 @@ void readCachorroQuente(Pedido *pedido) {
 
 	std::istringstream(tmp) >> prensado;
 
+	std::cout << "prensa: " << prensado << std::endl;
+
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> qtd;
 
+	std::cout << "qtde : " << qtd << std::endl;
+
 	Produto *produto = new CachorroQuente(num_salsichas, complementos, prensado, qtd);
 	pedido->adicionaProduto(produto);
-	// std::cout << "adicionou dogao\n";
+	std::cout << "adicionou dogao\n";
 }
 
 void readAcai(Pedido *pedido) {
