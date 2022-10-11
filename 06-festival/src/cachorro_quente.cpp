@@ -39,6 +39,8 @@ float CachorroQuente::calcPreco() {
 		preco_final = preco_final + 0.5;
 	}
 
+	preco_final = preco_final * CachorroQuente::getQtd();
+
 	return preco_final;
 };
 
@@ -46,13 +48,25 @@ std::string CachorroQuente::descricao() const {
 	std::string desc = "";
 
 	// desc = Produto::getQtd() + "X cachorro-quente com " + CachorroQuente::getNumSalsichas() + " salsichas ";
-	desc = Produto::getQtd() + "X cachorro-quente com " + CachorroQuente::getNumSalsichas();
 
-	desc + desc + " salsichas ";
+	desc = std::to_string(Produto::getQtd());
+
+	desc = desc + "X cachorro-quente ";
+
+	if (CachorroQuente::getPrensado()) {
+		desc = desc + "prensado com ";
+	} else {
+		desc = desc + "com ";
+	};
+
+	desc = desc + std::to_string(CachorroQuente::getNumSalsichas());
+
+	desc = desc + " salsicha(s)";
 
 	for (std::string s : _complementos) {
-		desc = desc + s + ", ";
-	}
+		desc = desc + ", ";
+		desc = desc + s;
+	};
 
 	desc = desc + ".";
 

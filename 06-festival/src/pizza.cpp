@@ -40,6 +40,8 @@ float Pizza::calcPreco() {
 		preco_final = preco_final + 8;
 	}
 
+	preco_final = preco_final * Pizza::getQtd();
+
 	return preco_final;
 };
 
@@ -47,9 +49,9 @@ std::string Pizza::descricao() const {
 	std::string desc = "";
 
 	// desc = Produto::getQtd() + "X com " + Pizza::getPedacos() + " pedaços de " + Pizza::getSabor();
-	desc = Produto::getQtd() + "X com " + Pizza::getPedacos();
+	// desc = std::to_string(Produto::getQtd()) + "X com " + std::to_string(Pizza::getPedacos());
 
-	desc = desc + " pedaços de " + Pizza::getSabor();
+	desc = std::to_string(Produto::getQtd()) + "X pizza " + Pizza::getSabor() + ", " + std::to_string(Pizza::getPedacos()) + " pedaços";
 
 	if (_borda == true) {
 		desc = desc + " e borda recheada";
