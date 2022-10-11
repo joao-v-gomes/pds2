@@ -40,6 +40,8 @@ float Pizza::calcPreco() {
 		preco_final = preco_final + 8;
 	}
 
+	preco_final = preco_final * Pizza::getQtd();
+
 	return preco_final;
 };
 

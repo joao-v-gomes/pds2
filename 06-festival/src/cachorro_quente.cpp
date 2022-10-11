@@ -39,6 +39,8 @@ float CachorroQuente::calcPreco() {
 		preco_final = preco_final + 0.5;
 	}
 
+	preco_final = preco_final * CachorroQuente::getQtd();
+
 	return preco_final;
 };
 
