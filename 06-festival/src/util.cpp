@@ -23,30 +23,42 @@ void readPizza(Pedido *pedido) {
 	int qtd;
 	float valor;
 
-	// std::cout << "digite sabor,pedacos,borda,qtde,valor\n";
+	std::cout << "digite sabor,pedacos,borda,qtde,valor\n";
 
 	std::string line, tmp;
 	std::getline(std::cin, line);
 	std::istringstream iss(line);
 
+	std::cout << "line: " << line << std::endl;
+
 	std::getline(iss, sabor, ',');
 	sabor.erase(sabor.begin());
+
+	std::cout << "sabor: " << sabor << std::endl;
 
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> pedacos;
 
+	std::cout << "pedacos: " << pedacos << std::endl;
+
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> borda_recheada;
+
+	std::cout << "borda: " << borda_recheada << std::endl;
 
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> qtd;
 
+	std::cout << "qtd: " << qtd << std::endl;
+
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> valor;
 
+	std::cout << "valor: " << valor << std::endl;
+
 	Produto *produto = new Pizza(sabor, pedacos, borda_recheada, qtd);
 	pedido->adicionaProduto(produto);
-	// std::cout << "adicionou pizza\n";
+	std::cout << "adicionou pizza\n";
 }
 
 void readCachorroQuente(Pedido *pedido) {

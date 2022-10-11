@@ -30,6 +30,8 @@ std::string Pedido::resumo() const {
 
 	// resumoPedido = resumoPedido + "\n";
 
+	resumoPedido = resumoPedido + "Endereço: ";
+
 	resumoPedido = resumoPedido + _endereco;
 
 	return resumoPedido;
