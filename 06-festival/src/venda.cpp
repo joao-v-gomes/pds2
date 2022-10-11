@@ -27,7 +27,7 @@ void Venda::imprimeRelatorio() const {
 
 	std::cout << "Total de vendas: R$";
 
-	std::cout << totalVendas;
+	std::cout << std::setprecision(2) << std::fixed << totalVendas;
 
 	std::cout << std::endl;
 

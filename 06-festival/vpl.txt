@@ -16,3 +16,88 @@ Endereço: Rua Lavras 158 Sao Pedro, Belo Horizonte
 Relatorio de Vendas
 Total de vendas: R$517.50
 Total de pedidos: 1
+
+
+Pedido 1
+5X pizza marguerita especial, 4 pedaços e borda recheada.
+3X cachorro-quente com 2 salsicha(s), purê de batata, ketchup.
+5X cachorro-quente prensado com 2 salsicha(s), ketchup, maionese, batata palha.
+6X pizza frango, 6 pedaços e borda recheada.
+Endereço: Av. do Contorno, 6061 - Sao Pedro, Belo Horizonte
+Pedido 2
+3X pizza frango, 4 pedaços.
+9X cachorro-quente com 4 salsicha(s), purê de batata, mostarda, ketchup, milho.
+4X cachorro-quente com 2 salsicha(s), ketchup, batata palha, purê de batata.
+4X pizza calabresa, 8 pedaços e borda recheada.
+7X cachorro-quente prensado com 4 salsicha(s), mostarda, maionese, purê de batata, milho.
+Endereço: Rua dos Tupis, 337 - Centro, Belo Horizonte
+Relatorio de Vendas
+Total de vendas: R$1065.00
+Total de pedidos: 2
+
+
+Pedido 1
+5X pizza marguerita especial, 4 pedaços e borda recheada.
+3X cachorro-quente com 2 salsicha(s), purê de batata, ketchup.
+5X cachorro-quente prensado com 2 salsicha(s), ketchup, maionese, batata palha.
+6X pizza frango, 6 pedaços e borda recheada.
+Endereço: Av. do Contorno, 6061 - Sao Pedro, Belo Horizonte
+Pedido 2
+3X pizza frango, 4 pedaços sem borda recheada.
+9X cachorro-quente com 4 salsicha(s), purê de batata, mostarda, ketchup, milho.
+4X cachorro-quente com 2 salsicha(s), ketchup, batata palha, purê de batata.
+4X pizza calabresa, 8 pedaços e borda recheada.
+7X cachorro-quente prensado com 4 salsicha(s), mostarda, maionese, purê de batata, milho.
+Endereço: Rua dos Tupis, 337 - Centro, Belo Horizonte
+Relatorio de Vendas
+Total de vendas: R$1065.00
+Total de pedidos: 2
+
+
+Pedido 1
+5X pizza marguerita especial, 4 pedaços e borda recheada.
+3X cachorro-quente com 2 salsicha(s), purê de batata, ketchup.
+5X cachorro-quente prensado com 2 salsicha(s), ketchup, maionese, batata palha.
+6X pizza frango, 6 pedaços e borda recheada.
+Endereço: Av. Cristiano Machado, 4.000 - Uniao, Belo Horizonte
+Pedido 2
+3X pizza frango, 4 pedaços sem borda recheada.
+9X cachorro-quente com 4 salsicha(s), purê de batata, mostarda, ketchup, milho.
+4X cachorro-quente com 2 salsicha(s), ketchup, batata palha, purê de batata.
+4X pizza calabresa, 8 pedaços e borda recheada.
+7X cachorro-quente prensado com 4 salsicha(s), mostarda, maionese, purê de batata, milho.
+Endereço: Rua dos Tupis, 337 - Centro, Belo Horizonte
+Pedido 3
+6X açaí 500ml com , gotas de chocolate.
+2X açaí 300ml com , gotas de chocolate, granola, morango.
+7X açaí 2000ml com , gotas de chocolate, castanha, kitkat.
+2X pizza milho, 8 pedaços e borda recheada.
+Endereço: Av. do Contorno, 6061 - Sao Pedro, Belo Horizonte
+Relatorio de Vendas
+Total de vendas: R$1583.00
+Total de pedidos: 3
+
+
+
+Pedido 1
+5X pizza marguerita especial, 4 pedaços e borda recheada.
+3X cachorro-quente com 2 salsicha(s), purê de batata, ketchup.
+5X cachorro-quente prensado com 2 salsicha(s), ketchup, maionese, batata palha.
+6X pizza frango, 6 pedaços e borda recheada.
+Endereço: Av. Cristiano Machado, 4.000 - Uniao, Belo Horizonte
+Pedido 2
+3X pizza frango, 4 pedaços sem borda recheada.
+9X cachorro-quente com 4 salsicha(s), purê de batata, mostarda, ketchup, milho.
+4X cachorro-quente com 2 salsicha(s), ketchup, batata palha, purê de batata.
+4X pizza calabresa, 8 pedaços e borda recheada.
+7X cachorro-quente prensado com 4 salsicha(s), mostarda, maionese, purê de batata, milho.
+Endereço: Rua dos Tupis, 337 - Centro, Belo Horizonte
+Pedido 3
+6X açai 500ml com gotas de chocolate.
+2X açai 300ml com gotas de chocolate, granola, morango.
+7X açai 2000ml com gotas de chocolate, castanha, kitkat.
+2X pizza milho, 8 pedaços e borda recheada.
+Endereço: Av. do Contorno, 6061 - Sao Pedro, Belo Horizonte
+Relatorio de Vendas
+Total de vendas: R$1583.00
+Total de pedidos: 3

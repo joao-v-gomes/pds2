@@ -31,15 +31,22 @@ std::vector<std::string> CachorroQuente::getComplementos() const {
 
 float CachorroQuente::calcPreco() {
 
+	// 5 reais preço base + 1.50 real por salsicha
+	//+ 1 real por complemento + 0.50 centavos se for prensar
+
 	float preco_final = 0;
 
 	preco_final = 5 + (1.5 * _num_salsichas) + (_complementos.size());
 
+	// std::cout << "qtde comple: " << _complementos.size() << std::endl;
+
 	if (_prensado == true) {
 		preco_final = preco_final + 0.5;
-	}
+	};
 
 	preco_final = preco_final * CachorroQuente::getQtd();
+
+	// std::cout << "Preco final: " << preco_final << std::endl;
 
 	return preco_final;
 };

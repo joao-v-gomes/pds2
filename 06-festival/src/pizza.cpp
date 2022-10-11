@@ -28,19 +28,38 @@ std::string Pizza::getSabor() const {
 };
 
 float Pizza::calcPreco() {
+
+	// 5 reais por pedaço + 10 reais se borda recheada
+	//+ 8 reais se sabor tiver a palavra "especial"
+
 	float preco_final;
 
 	preco_final = 5 * Pizza::getPedacos();
 
+	// std::cout << "Preco pizza1 :" << preco_final << std::endl;
+
 	if (_borda == true) {
 		preco_final = preco_final + 10;
-	}
+	};
 
-	if (Pizza::getSabor().find("especial")) {
+	// std::cout << "Preco pizza2 :" << preco_final << std::endl;
+
+	// std::string sab = Pizza::getSabor();
+
+	// size_t pegaEspecial = sab.find("especial");
+
+	// if (pegaEspecial != std::string::npos) {
+	// };
+
+	if (Pizza::getSabor().find("especial") != std::string::npos) {
 		preco_final = preco_final + 8;
-	}
+	};
+
+	// std::cout << "Preco pizza3 :" << preco_final << std::endl;
 
 	preco_final = preco_final * Pizza::getQtd();
+
+	// std::cout << "Preco pizza4 :" << preco_final << std::endl;
 
 	return preco_final;
 };
@@ -55,6 +74,8 @@ std::string Pizza::descricao() const {
 
 	if (_borda == true) {
 		desc = desc + " e borda recheada";
+	} else {
+		desc = desc + " sem borda recheada";
 	}
 
 	desc = desc + ".";

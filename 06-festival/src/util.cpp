@@ -54,7 +54,7 @@ void readPizza(Pedido *pedido) {
 	std::getline(iss, tmp, ',');
 	std::istringstream(tmp) >> valor;
 
-	std::cout << "valor: " << valor << std::endl;
+	// std::cout << "valor: " << valor << std::endl;
 
 	Produto *produto = new Pizza(sabor, pedacos, borda_recheada, qtd);
 	pedido->adicionaProduto(produto);

@@ -21,7 +21,15 @@ Acai::Acai(int tamanho, std::vector<std::string> &complementos, int qtd) {
 };
 
 float Acai::calcPreco() {
-	return _quantidade * _valor_unitario;
+	float precoFinal = 0;
+
+	precoFinal = Acai::getTamanho() * 0.02;
+
+	precoFinal = precoFinal + (_complementos.size() * 2);
+
+	precoFinal = precoFinal * Produto::getQtd();
+
+	return precoFinal;
 };
 
 int Acai::getTamanho() const {
@@ -39,21 +47,20 @@ std::string Acai::descricao() const {
 
 	// desc = Produto::getQtd() + "X açaí" + Acai::getTamanho() + "ml com ";
 
-	desc = Produto::getQtd() + "X açaí" + Acai::getTamanho();
+	desc = std::to_string(Produto::getQtd()) + "X açai ";
+	desc = desc + std::to_string(Acai::getTamanho()) + "ml com ";
 
-	desc = desc + +"ml com ";
+	int i = 0;
 
 	for (std::string s : _complementos) {
-		desc = desc + s + ", ";
+		if (i == 0) {
+			desc = desc + s;
+			i++;
+		} else {
+			desc = desc + ", ";
+			desc = desc + s;
+		};
 	};
-
-	// std::string complemento = "";
-
-	// for (int i = 0; i < 10; i++) {
-	// 	if (_complementos[i] != "") {
-	// 		desc = desc + c + ", ";
-	// 	}
-	// }
 
 	desc = desc + ".";
 
