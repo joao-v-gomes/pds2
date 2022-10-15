@@ -6,7 +6,7 @@ SRCDIR := src
 TARGET := main.out
 
 all: clean util
-	$(CC) $(FLAGS) $(LFLAGS) $(BUILDDIR)/*.o -o $(BUILDDIR)/$(TARGET)
+	$(CC) $(FLAGS) $(LFLAGS) $(BUILDDIR)/*.o -o $(TARGET)
 
 util: main
 	$(CC) $(FLAGS) -c $(SRCDIR)/util.cpp -o $(BUILDDIR)/util.o
