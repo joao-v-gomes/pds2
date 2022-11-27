@@ -19,10 +19,32 @@ TEST_CASE("Testando a getPerimiter") {
 }
 
 TEST_CASE("Testando a getKind") {
-	SUBCASE("Caso Positivo: ") {
+	SUBCASE("Caso Positivo: O codigo verifica isoceles antes de equilatero") {
+
+		shapes::Triangle tri(6, 6, 6);
+
+		CHECK_EQ(shapes::Triangle::Kind::ISOSCELES, tri.getKind());
 	}
 
-	SUBCASE("Caso Negativo: ") {
+	SUBCASE("Caso Negativo: O codigo deve verificar equilatero primeiro") {
+
+		shapes::Triangle tri(6, 6, 6);
+
+		CHECK_EQ(shapes::Triangle::Kind::EQUILATERAL, tri.getKind());
+	}
+}
+
+TEST_CASE("Testando a getArea") {
+	SUBCASE("Caso Positivo: Com a getPerimete errada") {
+		shapes::Triangle tri(10, 6, 5);
+
+		CHECK_EQ(18.1659, tri.getArea());
+	}
+
+	SUBCASE("Caso Negativo: Com a getPerimetro correta") {
+		shapes::Triangle tri(10, 6, 5);
+
+		CHECK_EQ(11.4, tri.getArea());
 	}
 }
 
